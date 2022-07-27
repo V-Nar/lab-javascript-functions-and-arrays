@@ -192,6 +192,9 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
+
+// unfinished iteration
+
 function greatestProduct(grid) {
   let productArr = [];
 
@@ -203,7 +206,7 @@ function greatestProduct(grid) {
 
   for (let i = 0; i < grid.lenght; i++) {
     for (let j = 0; j <= grid[i].length - 4; j += 4) {
-      let arrToMultiply = grid[i].slice(grid[i][j], grid[i][j + 4]);
+      let arrToMultiply = grid[i].slice([j], [j + 4]);
       productArr.push(multiplyNum(arrToMultiply));
     }
   }
